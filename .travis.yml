@@ -9,15 +9,13 @@ before_script:
   - sudo apt-get update -y
   - sudo apt-get install nodejs npm pandoc
   - sudo apt-get install libghc-pandoc-prof
-  - pip install -r requirements.txt
-  - filename=$(basename *.docx .docx)
-  - pandoc -s ${filename}.docx --wrap=none --reference-links -t markdown --filter ./despan.py -o ${filename}.md
+  - pandoc -s %{branch}.docx -t markdown -o %{branch}.md
   - npm init -y
   - npm install textlint --save-dev
   - npm install textlint-rule-preset-ja-technical-writing --save-dev
   - npm install npx --save-dev
 script:
-  - npx textlint --preset ja-technical-writing ${filename}.md
+  - npx textlint --preset ja-technical-writing %{branch}.md
 notifications:
   email: false
   slack:
@@ -25,6 +23,6 @@ notifications:
       - secure: RDlQncIloLs3IIAlf46/7hWsSMdv/orAuCKa702Kjiz3WOsbXzMJku4mpjDkfSd3NRPdA2Q5LFt3rW+V5EVOaDqJclY0/j/eyI+nyigF59xEOFiFd4Lq+pYgDPcTHQW6xvyDjd4XGSQHvPiJHfdEZrJO243hGIPUFY34SOS7F76xdf1tO0HcEA/6rgNpn7nX+RP3ZGfIW6jmkcGnNcwqLuIXRqs0c4qAiszDKQrvDWW+v+zRtyRbocXSQ2ddJ47ChcN6vXgi+eI7qkHPXX+C+nc/oE11T01N455VPuwtQ9QW2Fo2nvaYRA4TAYN3VdZrC5CYnDLKLrrQwxHan7f4xNvri8bhXKKJbiCajoiC5lrV3qTyNM6h9LLQcgybse99pqpAqi/r12EXREfxlYUT2+A08/EC+msTMSGhp2RptS6tJnoaWSF8/UKa6CqT4397/O6m4ygFsWR7n+0ncC7qWOqbMeSFRSLQxULhLPv5l9LF6CssYsMP+PZr9i40VVB1BifOWlI+EUaba+BjQZ+GksqQhiu3etayYVfzjXUBk3JgqMSklYoKeD9iK3UNgDt+Xu9KxtbAKHwEmYo+KrNvKkKtaat61TAYVYama8Rg8T04HdC04osTf/kOUCMCP2cywrv91NLyolgYfjNwVUI2YCD8oj19X/8d/rokzL3t4JE=
     template:
       - "Sotsuron checked on `%{branch}`."
-      - "Result: (<https://travis-ci.org/github/ogi-iii/Sotsuron_CI_CD/branches|%{message}>)"
-      - "------------------------------"
-      - "Sotsuron Download: https://github.com/ogi-iii/Sotsuron_CI_CD/raw/%{branch}/%{branch}.docx"
+      - "Result: <https://travis-ci.org/github/ogi-iii/Sotsuron_CI_CD/branches|%{message}>"
+      - "----------------------------------------"
+      - "Download Sotsuron: https://github.com/ogi-iii/Sotsuron_CI_CD/raw/%{branch}/%{branch}.docx"
