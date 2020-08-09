@@ -9,13 +9,13 @@ before_script:
   - sudo apt-get update -y
   - sudo apt-get install nodejs npm pandoc
   - sudo apt-get install libghc-pandoc-prof
-  - pandoc -s %{branch}.docx -t markdown -o %{branch}.md
+  - pandoc -s ${TRAVIS_BRANCH}.docx -t markdown -o ${TRAVIS_BRANCH}.md
   - npm init -y
   - npm install textlint --save-dev
   - npm install textlint-rule-preset-ja-technical-writing --save-dev
   - npm install npx --save-dev
 script:
-  - npx textlint --preset ja-technical-writing %{branch}.md
+  - npx textlint --preset ja-technical-writing ${TRAVIS_BRANCH}.md
 notifications:
   email: false
   slack:
