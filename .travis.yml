@@ -5,6 +5,7 @@ python:
 before_script:
   - sudo apt-get update -y
   - sudo apt-get install nodejs npm pandoc
+  - pip install -r requirements.txt
   - filename=$(basename *.docx .docx)
   - python slack_notify.py $TRAVIS_JOB_WEB_URL
   - pandoc -s ${filename}.docx --wrap=none --reference-links --extract-media=media -t gfm --filter ./despan.py -o ${filename}.md
