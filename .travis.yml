@@ -14,7 +14,7 @@ before_script:
   - npm install textlint-rule-preset-ja-technical-writing --save-dev
   - npm install npx --save-dev
 script:
-  - npx textlint --preset ja-technical-writing ${TRAVIS_BRANCH}.md
+  - npx textlint --preset ja-technical-writing ${TRAVIS_BRANCH}.md -f pretty-error
 notifications:
   email: false
   slack:
