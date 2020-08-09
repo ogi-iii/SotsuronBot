@@ -2,13 +2,12 @@ branches:
   except:
     - master
 sudo: false
-language: python
-python:
-- '3.8'
+language: node_js
+node_js:
+  - '8.12.0'
 before_script:
   - sudo apt-get update -y
-  - sudo apt-get install nodejs npm pandoc
-  - sudo apt-get install libghc-pandoc-prof
+  - sudo apt-get install pandoc libghc-pandoc-prof
   - pandoc -s ${TRAVIS_BRANCH}.docx -t markdown -o ${TRAVIS_BRANCH}.md
   - npm init -y
   - npm install textlint --save-dev
