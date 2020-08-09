@@ -1,2 +1,3 @@
-# SotsuronBot
-卒論用CI/CD
+# Sotsuron CI/CD
+- CI: textlintによる文章校正
+- CD: 更新ファイルリンクのslack通知
