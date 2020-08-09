@@ -8,7 +8,7 @@ before_script:
   - pip install -r requirements.txt
   - filename=$(basename *.docx .docx)
   - python slack_notify.py $TRAVIS_JOB_WEB_URL
-  - pandoc -s ${filename}.docx --wrap=none --reference-links --extract-media=media -t gfm --filter ./despan.py -o ${filename}.md
+  - pandoc -s ${filename}.docx --wrap=none --reference-links --extract-media=media -t markdown --filter ./despan.py -o ${filename}.md
   - npm init -y
   - npm install textlint --save-dev
   - npm install textlint-rule-preset-ja-technical-writing --save-dev
