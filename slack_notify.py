@@ -2,7 +2,7 @@ import json
 import requests
 import sys
 
-slackURL="https://hooks.slack.com/services/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"
+slackURL="https://hooks.slack.com/services/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"
 
 def main():
     text = f"New file uploaded! \nfile download: https://github.com/ogi-iii/Sotsuron_CI_CD/raw/ogi_sotsuron/ogi_sotsuron.docx \ntextlint: {sys.argv[1]}"

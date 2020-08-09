@@ -5,6 +5,7 @@ python:
 before_script:
   - sudo apt-get update -y
   - sudo apt-get install nodejs npm pandoc
+  - sudo apt-get install libghc-pandoc-prof
   - pip install -r requirements.txt
   - filename=$(basename *.docx .docx)
   - python slack_notify.py $TRAVIS_JOB_WEB_URL
