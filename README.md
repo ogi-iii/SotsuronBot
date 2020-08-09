@@ -1,3 +1,3 @@
-# Sotsuron CI/CD
-- CI: textlintによる文章校正
-- CD: 更新ファイルリンクのslack通知
+# Sotsuron CI
+- textlintによる文章校正
+- 更新ファイルのリンクをslackに通知
