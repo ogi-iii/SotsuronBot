@@ -22,7 +22,7 @@ notifications:
     rooms:
       - secure: "[API TOKEN]"
     template:
-      - "'Sotsuron' updated: `%{branch}`."
+      - "'Sotsuron' updated: `%{branch}`"
       - "Document Checking Result: <https://travis-ci.org/github/ogi-iii/Sotsuron_CI/branches|%{message}>"
       - "----------------------------------------"
       - "File Download: https://github.com/ogi-iii/Sotsuron_CI/raw/%{branch}/%{branch}.docx"
