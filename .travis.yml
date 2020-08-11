@@ -20,7 +20,7 @@ notifications:
   email: false
   slack:
     rooms:
-      - secure: "[API TOKEN]"
+      - secure: "R4F2PJqbfVAoIZtjzODJd3EDc2nmzPVdgyEOrMXMrVnD1GmsSczySlBNM4/yYy0foCEX2NYSLzXeyc9AHpdin+EyGgMKC6x2iuah8Iey2LKJrkU/WfuRs4vMR4PFUk5Su9qB0ZW7l2J5edP4cjutu0prxxW7VIceQo7GO8kN1h40QvXZpT1IEc6Kpahl6RajlflzagoVBfsjZuC5QGQ41LXKrsji+fkXDrDD4gAgOoAE/WiltVBC1uS8eoc0WXtjqIra77iKc0F410VhwJcdP0UdSTd6Fed9I5aZ6WyTjP/isugQBhJg7RHTgCYAsE+gSV1vtWJzQQUohIun0YeYVwXmKErgrRN40l95xRh6XR80ZU79CYLGPpB1TIRCZIdPptJGCM3GmJ4jEj78xtR55TLI/K8K+5bmBY27HC4PvkvYRVnXXHnpl7gfiKTMy4iHDk0/T+CIqq1p8zlk3AWwCCBa25Qx9HLKSq3ZYjAxHAR659LoNjCyQls/nw24NsPkQi+ZjQjDdVJ4/Dngos0m/9BEPDrA4RqIPDCN0RZ11j10I3/wLZ4U2sSv3akDtMjRIv3Fik7PqwTJPkB346MsujYK3bcwWAv9MXUKdXUH8bOrSJK7AsSY8PQRFDB5MH1Qae3FyZjUul6pr0TuiWrkdvHCWGSWXlCFVZT32d+S8LY="
     template:
       - "'Sosturon' updated: `%{branch}`."
       - "Document Checking Result: <https://travis-ci.org/github/ogi-iii/Sotsuron_CI/branches|%{message}>"
