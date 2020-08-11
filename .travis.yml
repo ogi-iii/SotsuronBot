@@ -22,7 +22,7 @@ notifications:
     rooms:
       - secure: "[API TOKEN]"
     template:
-      - "卒論 `%{branch}` が更新されました。"
-      - "校正結果: <https://travis-ci.org/github/ogi-iii/Sotsuron_CI/branches|%{message}>"
+      - "Sosturon updated on `%{branch}`."
+      - "Document Checking Result: <https://travis-ci.org/github/ogi-iii/Sotsuron_CI/branches|%{message}>"
       - "----------------------------------------"
-      - "卒論ファイルのダウンロード: https://github.com/ogi-iii/Sotsuron_CI/raw/%{branch}/%{branch}.docx"
+      - "File Download: https://github.com/ogi-iii/Sotsuron_CI/raw/%{branch}/%{branch}.docx"
