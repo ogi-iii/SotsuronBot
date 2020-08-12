@@ -9,10 +9,13 @@
   "rules": {
     "preset-ja-technical-writing": {
       "sentence-length": {
-          "max": 150
-        },
+        "max": 150
+      },
       "max-kanji-continuous-len": {
-          max: 10
+        "max": 10
+      },
+      "max-ten": {
+        "max": 5
       },
       "max-comma": {
         "max": 5
