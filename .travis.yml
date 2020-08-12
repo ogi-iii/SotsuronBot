@@ -13,9 +13,10 @@ before_script:
   - npm init -y
   - npm install textlint --save-dev
   - npm install textlint-rule-preset-ja-technical-writing --save-dev
+  - npm install textlint-filter-rule-allowlist --save-dev
   - npm install npx --save-dev
 script:
-  - npx textlint --preset ja-technical-writing ${TRAVIS_BRANCH}.md -f pretty-error
+  - npx textlint ${TRAVIS_BRANCH}.md --preset ja-technical-writing textlint-filter-rule-allowlist -f pretty-error
 notifications:
   email: false
   slack:

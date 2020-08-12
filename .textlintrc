@@ -1,5 +1,11 @@
 {
-  "filters": {},
+  "filters": {
+    "allowlist": {
+      "allow": [
+          "/\\$\\$[\\s\\S]*?\\$\\$/m"
+      ]
+    }
+  },
   "rules": {
     "preset-ja-technical-writing": {
       "sentence-length": {
