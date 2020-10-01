@@ -3,14 +3,13 @@
     "allowlist": {
       "allow": [
           "/\\$\\$[\\s\\S]*?\\$\\$/m"
-          "^\[\^\d{1,2}\].*$"
       ]
     }
   },
   "rules": {
     "preset-ja-technical-writing": {
       "sentence-length": {
-        "max": 150
+        "max": 250
       },
       "max-kanji-continuous-len": {
         "max": 10
