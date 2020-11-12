@@ -24,6 +24,7 @@
       "ja-unnatural-alphabet": false,
       "no-exclamation-question-mark": false,
       "no-unmatched-pair": false,
+      "ja-no-successive-word": false,
     }
   }
 }
